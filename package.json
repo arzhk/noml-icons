@@ -1,0 +1,51 @@
+{
+  "name": "noml-icons",
+  "version": "0.1.0",
+  "description": "Noml Icons - the Noml suite's icon set. Geometric monoline glyphs with superellipse squircle corners, flat butt terminals, and beveled apexes, drawn to pair with Noml Sans.",
+  "license": "MIT",
+  "author": "Aaron (https://github.com/arzhk)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arzhk/noml-icons.git"
+  },
+  "homepage": "https://github.com/arzhk/noml-icons#readme",
+  "bugs": {
+    "url": "https://github.com/arzhk/noml-icons/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "demo": "bun scripts/build-demo.tsx",
+    "prepublishOnly": "tsc"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": [
+    "icons",
+    "react",
+    "svg",
+    "noml",
+    "squircle"
+  ]
+}

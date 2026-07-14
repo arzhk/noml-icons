@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <filter id="s" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="1.5" dy="2" stdDeviation="0.9" flood-color="#000" flood-opacity="0.45"/>
+  </filter>
+  <path d="M13 3 Q10 3 10 6 L10 13 Q10 14 8 14 L6 14 Q5 14 5 17 L5 19 Q5 22 6 22 L8 22 Q10 22 10 25 Q10 27 13 27 L22 27 Q26 27 26 24 L26 14 Q26 10 22 11.5 Q18 10 17 12 Q16 12 16 13 L16 6 Q16 3 13 3 Z"
+        fill="#fff" stroke="#000" stroke-width="3.5"
+        stroke-linejoin="round" stroke-linecap="round"
+        paint-order="stroke"
+        filter="url(#s)"/>
+</svg>
