@@ -299,13 +299,15 @@ export function StashPopIcon({ className }: { className?: string }) {
   );
 }
 
-/** Amend/history: rewind clock - 270-degree arc, corner bracket, hands. */
+/** Amend/history: rewind clock - 270-degree arc, corner bracket, hands.
+ *  Hands run 6.75->12->15.75 (not shorter) so they survive 14px renders -
+ *  stubbier hands vanish and the face reads as an empty ring. */
 export function HistoryIcon({ className }: { className?: string }) {
   return (
     <Icon className={className}>
       <path d="M3.25 12A8.75 8.75 0 1 0 12 3.25C9.4 3.25 7.05 4.25 5.2 6.05L3.25 8" />
       <path d="M3.25 3.25V8H8" />
-      <path d="M12 7.5V12H15.25" />
+      <path d="M12 6.75V12H15.75" />
     </Icon>
   );
 }
@@ -498,7 +500,7 @@ export function ClockIcon({ className }: { className?: string }) {
   return (
     <Icon className={className}>
       <path d={squircle(12, 12, 8.75)} />
-      <path d="M12 7.5V12H15.25" />
+      <path d="M12 6.75V12H15.75" />
     </Icon>
   );
 }
