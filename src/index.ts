@@ -1,3 +1,3 @@
-export * from "./icons";
-export { SuiteIcon } from "./SuiteIcon";
-export { squircle } from "./squircle";
+export * from "./icons.js";
+export { SuiteIcon } from "./SuiteIcon.js";
+export { squircle } from "./squircle.js";

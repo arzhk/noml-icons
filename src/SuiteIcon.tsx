@@ -2,7 +2,7 @@
  *  Noml Sans superellipse DNA (exponent 2.55). The launcher glyph - its
  *  round k=0.7 tiles read as app dots at small sizes, distinct from
  *  LayoutGridIcon's boxier pane tiles. */
-import { squircle } from "./squircle";
+import { squircle } from "./squircle.js";
 
 const TILES = [
   squircle(6.5, 6.5, 3.5),

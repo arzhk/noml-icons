@@ -3,7 +3,7 @@
  *  superellipse squircle rounds. 24-unit grid, stroke 2, currentColor.
  *  Every icon takes only a className. */
 import type { ComponentType, ReactNode } from "react";
-import { squircle } from "./squircle";
+import { squircle } from "./squircle.js";
 
 /** The contract every icon here satisfies - for code that passes icons
  *  around as values. */
