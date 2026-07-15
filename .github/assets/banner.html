@@ -1,0 +1,72 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  @font-face {
+    font-family: "Noml Sans Rounded";
+    src: url("../../docs/fonts/NomlSansRounded-Bold.woff2") format("woff2");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Noml Sans Rounded";
+    src: url("../../docs/fonts/NomlSansRounded-Medium.woff2") format("woff2");
+    font-weight: 500;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; width: 1200px; height: 440px; background: #000;
+    font-family: "Cascadia Mono", ui-monospace, Consolas, monospace;
+    position: relative; overflow: hidden;
+  }
+  .frame { position: absolute; inset: 12px; border: 1px solid #262626; }
+  .corner {
+    position: absolute; font-size: 12px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #8a8a8a;
+  }
+  .tl { top: 34px; left: 60px; }
+  .tr { top: 34px; right: 60px; }
+  .bl { bottom: 34px; left: 60px; }
+  .br { bottom: 34px; right: 60px; }
+  .glyph { position: absolute; }
+  .glyph svg { width: 100%; height: 100%; }
+  .tile {
+    position: absolute; left: 64px; top: 138px; width: 164px; height: 164px;
+    background: #131313; border-radius: 38px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .tile svg { width: 104px; height: 104px; color: #fff; }
+  .text { position: absolute; left: 296px; top: 138px; }
+  h1 {
+    margin: 0; font-family: "Noml Sans Rounded", sans-serif;
+    font-size: 74px; font-weight: 700; line-height: 1; color: #fff;
+    letter-spacing: -0.03em;
+  }
+  .tagline { margin: 26px 0 0; font-size: 21px; color: #e8e8e8; letter-spacing: 0.01em; }
+  .sub { margin: 14px 0 0; font-size: 15.5px; color: #7a7a7a; letter-spacing: 0.01em; }
+</style></head>
+<body>
+  <div class="frame"></div>
+<span class="glyph" style="left:150px;top:68px;width:40px;height:40px;color:#2e2e2e"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.5 19H9A7 7 0 1 1 15.71 10H17.5A4.5 4.5 0 1 1 17.5 19Z"></path></svg></span>
+<span class="glyph" style="left:265px;top:88px;width:28px;height:28px;color:#2a2a2a"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5C6.5 16.5 3 13.25 3 9.5C3 6.75 5.1 4.75 7.65 4.75C9.4 4.75 11 5.75 12 7.25C13 5.75 14.6 4.75 16.35 4.75C18.9 4.75 21 6.75 21 9.5C21 13.25 17.5 16.5 12 20.5Z"></path></svg></span>
+<span class="glyph" style="left:425px;top:78px;width:28px;height:28px;color:#303030"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linejoin="bevel" d="M12 3.25 14.44 9.64 21.27 9.99 15.95 14.28 17.73 20.89 12 16.9 6.27 20.89 8.05 14.28 2.73 9.99 9.56 9.64Z"></path></svg></span>
+<span class="glyph" style="left:620px;top:88px;width:26px;height:26px;color:#2a2a2a"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 13.5C19 18.4 16.9 20.5 12 20.5C7.1 20.5 5 18.4 5 13.5C5 8.6 7.1 6.5 12 6.5C16.9 6.5 19 8.6 19 13.5Z"></path><path d="M12 6.5V20.5"></path><path stroke-width="2.5" d="M7 3.5 9.75 7M17 3.5 14.25 7"></path><path stroke-width="2.5" d="M5.4 11.5 2 10M18.6 11.5 22 10M5.6 16.5 2.25 18.75M18.4 16.5 21.75 18.75"></path></svg></span>
+<span class="glyph" style="left:705px;top:58px;width:32px;height:32px;color:#2e2e2e"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linejoin="bevel" d="M13 2.75 4.5 13.25H11L10.5 21.25 19.5 10.75H12.75Z"></path></svg></span>
+<span class="glyph" style="left:862px;top:92px;width:24px;height:24px;color:#343434"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2.75C12.7 7.8 16.2 11.3 21.25 12C16.2 12.7 12.7 16.2 12 21.25C11.3 16.2 7.8 12.7 2.75 12C7.8 11.3 11.3 7.8 12 2.75Z"></path></svg></span>
+<span class="glyph" style="left:1002px;top:64px;width:38px;height:38px;color:#303030"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12.5 2.75A6.9 6.9 0 0 0 21.25 11.5A9.1 9.1 0 1 1 12.5 2.75Z"></path></svg></span>
+<span class="glyph" style="left:1082px;top:152px;width:38px;height:38px;color:#2c2c2c"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linejoin="bevel" d="M12 2.75C7.75 2.75 4.75 5.9 4.75 10.25V21.25L7.17 18.83 9.58 21.25 12 18.83 14.42 21.25 16.83 18.83 19.25 21.25V10.25C19.25 5.9 16.25 2.75 12 2.75Z"></path><path d="M10.7 10.5C10.7 11.34 10.34 11.7 9.5 11.7C8.66 11.7 8.3 11.34 8.3 10.5C8.3 9.66 8.66 9.3 9.5 9.3C10.34 9.3 10.7 9.66 10.7 10.5ZM15.7 10.5C15.7 11.34 15.34 11.7 14.5 11.7C13.66 11.7 13.3 11.34 13.3 10.5C13.3 9.66 13.66 9.3 14.5 9.3C15.34 9.3 15.7 9.66 15.7 10.5Z" fill="currentColor" stroke="none"></path></svg></span>
+<span class="glyph" style="left:1058px;top:250px;width:42px;height:42px;color:#2e2e2e"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2.75C14.9 4.6 16.25 7.6 16.25 11V16H7.75V11C7.75 7.6 9.1 4.6 12 2.75Z"></path><path d="M14 9.5C14 10.9 13.4 11.5 12 11.5C10.6 11.5 10 10.9 10 9.5C10 8.1 10.6 7.5 12 7.5C13.4 7.5 14 8.1 14 9.5Z"></path><path d="M7.75 11.75 4.75 14.75V18L7.75 16.5M16.25 11.75 19.25 14.75V18L16.25 16.5"></path><path d="M12 18.25V21.5"></path></svg></span>
+<span class="glyph" style="left:84px;top:348px;width:34px;height:34px;color:#2c2c2c"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 6C21 8.1 20.1 9 18 9C15.9 9 15 8.1 15 6C15 3.9 15.9 3 18 3C20.1 3 21 3.9 21 6ZM9 18C9 20.1 8.1 21 6 21C3.9 21 3 20.1 3 18C3 15.9 3.9 15 6 15C8.1 15 9 15.9 9 18Z"></path><path d="M6 3V15"></path><path d="M18 9C18 15.3 15.3 18 9 18"></path></svg></span>
+<span class="glyph" style="left:300px;top:352px;width:38px;height:38px;color:#2e2e2e"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.5 12C17.5 15.85 15.85 17.5 12 17.5C8.15 17.5 6.5 15.85 6.5 12C6.5 8.15 8.15 6.5 12 6.5C15.85 6.5 17.5 8.15 17.5 12Z"></path><path stroke-width="3" d="M12 6.25V3.25M12 17.75v3M17.75 12h3M6.25 12h-3M16.38 7.62l1.81-1.81M16.38 16.38l1.81 1.81M7.62 16.38l-1.81 1.81M7.62 7.62L5.81 5.81"></path><path d="M13.5 12C13.5 13.05 13.05 13.5 12 13.5C10.95 13.5 10.5 13.05 10.5 12C10.5 10.95 10.95 10.5 12 10.5C13.05 10.5 13.5 10.95 13.5 12Z" fill="currentColor" stroke="none"></path></svg></span>
+<span class="glyph" style="left:522px;top:356px;width:32px;height:32px;color:#2a2a2a"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 11C17 15.2 15.2 17 11 17C6.8 17 5 15.2 5 11C5 6.8 6.8 5 11 5C15.2 5 17 6.8 17 11Z"></path><path d="M15.6 15.6 20.75 20.75"></path></svg></span>
+<span class="glyph" style="left:742px;top:348px;width:34px;height:34px;color:#2e2e2e"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2.75C8.55 2.75 6 5.3 6 8.5C6 10.4 6.9 11.7 7.8 12.75C8.5 13.55 9 14.3 9 15.25H15C15 14.3 15.5 13.55 16.2 12.75C17.1 11.7 18 10.4 18 8.5C18 5.3 15.45 2.75 12 2.75Z"></path><path d="M9.5 18.25H14.5M10.25 21.25H13.75"></path></svg></span>
+<span class="glyph" style="left:942px;top:356px;width:28px;height:28px;color:#2c2c2c"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2.75C15.75 2.75 18.5 8.25 18.5 13.25C18.5 17.75 15.75 21.25 12 21.25C8.25 21.25 5.5 17.75 5.5 13.25C5.5 8.25 8.25 2.75 12 2.75Z"></path></svg></span>
+<span class="glyph" style="left:1082px;top:348px;width:32px;height:32px;color:#303030"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7.3 10.2C7.3 11.389999999999999 6.789999999999999 11.899999999999999 5.6 11.899999999999999C4.41 11.899999999999999 3.8999999999999995 11.389999999999999 3.8999999999999995 10.2C3.8999999999999995 9.01 4.41 8.5 5.6 8.5C6.789999999999999 8.5 7.3 9.01 7.3 10.2ZM11.6 6.4C11.6 7.59 11.09 8.1 9.9 8.1C8.71 8.1 8.200000000000001 7.59 8.200000000000001 6.4C8.200000000000001 5.210000000000001 8.71 4.7 9.9 4.7C11.09 4.7 11.6 5.210000000000001 11.6 6.4ZM15.799999999999999 6.4C15.799999999999999 7.59 15.29 8.1 14.1 8.1C12.91 8.1 12.4 7.59 12.4 6.4C12.4 5.210000000000001 12.91 4.7 14.1 4.7C15.29 4.7 15.799999999999999 5.210000000000001 15.799999999999999 6.4ZM20.099999999999998 10.2C20.099999999999998 11.389999999999999 19.59 11.899999999999999 18.4 11.899999999999999C17.209999999999997 11.899999999999999 16.7 11.389999999999999 16.7 10.2C16.7 9.01 17.209999999999997 8.5 18.4 8.5C19.59 8.5 20.099999999999998 9.01 20.099999999999998 10.2Z"></path><path d="M12 11.25C14.6 11.25 16.75 13.35 17 15.9C17.16 17.6 15.8 19 14.1 19C13.35 19 12.65 18.6 12 18.6C11.35 18.6 10.65 19 9.9 19C8.2 19 6.84 17.6 7 15.9C7.25 13.35 9.4 11.25 12 11.25Z"></path></svg></span>
+  <span class="corner tl">noml.app</span>
+  <span class="corner tr">react / typescript</span>
+  <span class="corner bl">$ npm install noml-icons</span>
+  <span class="corner br">417 icons · mit</span>
+  <div class="tile"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path fill="currentColor" stroke="none" d="M6.4 2.2h4.2v0.7h-4.2ZM5.7 2.9h5.6v0.7h-5.6ZM4.3 3.6h8.4v0.7h-8.4ZM2.2 4.3h10.5v0.7h-10.5ZM1.5 5h11.9v0.7h-11.9ZM1.5 5.7h7v0.7h-7ZM9.9 5.7h3.5v1.4h-3.5ZM1.5 6.4h6.3v1.4h-6.3ZM9.9 7.1h4.9v0.7h-4.9ZM1.5 7.8h1.4v0.7h-1.4ZM3.6 7.8h4.9v0.7h-4.9ZM9.2 7.8h6.3v0.7h-6.3ZM1.5 8.5h14v0.7h-14ZM1.5 9.2h13.3v0.7h-13.3ZM2.2 9.9h11.2v0.7h-11.2ZM2.9 10.6h13.3v0.7h-13.3ZM7.8 11.3h8.4v0.7h-8.4ZM7.8 12h7.7v0.7h-7.7ZM6.4 12.7h9.8v0.7h-9.8ZM16.9 12.7h0.7v0.7h-0.7ZM5.7 13.4h11.9v0.7h-11.9ZM6.4 14.1h0.7v0.7h-0.7ZM8.5 14.1h10.5v0.7h-10.5ZM7.8 14.8h11.2v1.4h-11.2ZM21.8 14.8h0.7v0.7h-0.7ZM20.4 15.5h2.1v0.7h-2.1ZM7.8 16.2h14v1.4h-14ZM8.5 17.6h11.9v0.7h-11.9ZM8.5 18.3h10.5v0.7h-10.5ZM9.2 19h7.7v0.7h-7.7ZM9.2 19.7h2.8v0.7h-2.8ZM13.4 19.7h3.5v0.7h-3.5ZM8.5 20.4h2.8v1.4h-2.8ZM13.4 20.4h2.8v1.4h-2.8Z"></path></svg></div>
+  <div class="text">
+    <h1>Noml Icons</h1>
+    <p class="tagline">The Noml suite's icon set, drawn to pair with Noml Sans.</p>
+    <p class="sub">417 geometric monoline glyphs. Squircle rounds, flat terminals, beveled apexes.</p>
+  </div>
+</body></html>
