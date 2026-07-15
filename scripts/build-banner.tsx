@@ -76,12 +76,7 @@ const banner = `<!doctype html>
   .br { bottom: 34px; right: 60px; }
   .glyph { position: absolute; }
   .glyph svg { width: 100%; height: 100%; }
-  .tile {
-    position: absolute; left: 64px; top: 138px; width: 164px; height: 164px;
-    background: #131313; border-radius: 38px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .tile svg { width: 104px; height: 104px; color: #fff; }
+  .tile { position: absolute; left: 64px; top: 138px; width: 164px; height: 164px; }
   .text { position: absolute; left: 296px; top: 138px; }
   h1 {
     margin: 0; font-family: "Noml Sans Rounded", sans-serif;
@@ -98,7 +93,7 @@ ${scatter}
   <span class="corner tr">react / typescript</span>
   <span class="corner bl">$ npm install noml-icons</span>
   <span class="corner br">${count} icons · mit</span>
-  <div class="tile">${svg("DinoIcon")}</div>
+  <img class="tile" src="app-icon.png" alt="" width="164" height="164"/>
   <div class="text">
     <h1>Noml Icons</h1>
     <p class="tagline">The Noml suite's icon set, drawn to pair with Noml Sans.</p>
