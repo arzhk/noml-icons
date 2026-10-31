@@ -9,6 +9,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as Icons from "../src/index";
+import { label } from "./label";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const out = join(root, ".github", "assets");
@@ -109,13 +110,10 @@ const PREVIEW: Array<keyof typeof Icons> = [
   "PlayIcon", "PauseIcon", "MicIcon", "CameraIcon", "MailIcon", "CalendarIcon", "MapPinIcon", "RocketIcon",
 ];
 
-const cells = PREVIEW.map((name) => {
-  const label = name
-    .replace(/Icon$/, "")
-    .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
-    .toLowerCase();
-  return `<div class="cell"><span class="i">${svg(name)}</span><span class="l">${label}</span></div>`;
-}).join("\n");
+const cells = PREVIEW.map(
+  (name) =>
+    `<div class="cell"><span class="i">${svg(name)}</span><span class="l">${label(name)}</span></div>`,
+).join("\n");
 
 const preview = `<!doctype html>
 <html><head><meta charset="utf-8"><style>

@@ -7,12 +7,17 @@
  *  squircle reads as a plain circle, mirroring how the font varies
  *  exponent with optical size. */
 export function squircle(cx: number, cy: number, r: number, k = 0.7): string {
-  const h = Math.round(r * k * 100) / 100;
+  // Round every coordinate, not just h: float sums like 16.1 + 1.1 print
+  // as 17.200000000000003 otherwise.
+  const round = (v: number) => Math.round(v * 100) / 100;
+  const h = round(r * k);
+  const x = (d: number) => round(cx + d);
+  const y = (d: number) => round(cy + d);
   return (
-    `M${cx + r} ${cy}` +
-    `C${cx + r} ${cy + h} ${cx + h} ${cy + r} ${cx} ${cy + r}` +
-    `C${cx - h} ${cy + r} ${cx - r} ${cy + h} ${cx - r} ${cy}` +
-    `C${cx - r} ${cy - h} ${cx - h} ${cy - r} ${cx} ${cy - r}` +
-    `C${cx + h} ${cy - r} ${cx + r} ${cy - h} ${cx + r} ${cy}Z`
+    `M${x(r)} ${y(0)}` +
+    `C${x(r)} ${y(h)} ${x(h)} ${y(r)} ${x(0)} ${y(r)}` +
+    `C${x(-h)} ${y(r)} ${x(-r)} ${y(h)} ${x(-r)} ${y(0)}` +
+    `C${x(-r)} ${y(-h)} ${x(-h)} ${y(-r)} ${x(0)} ${y(-r)}` +
+    `C${x(h)} ${y(-r)} ${x(r)} ${y(-h)} ${x(r)} ${y(0)}Z`
   );
 }

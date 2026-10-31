@@ -11,7 +11,7 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-1f1f1f?style=flat-square&labelColor=000000"/>
 </p>
 
-**Noml Icons** is the [Noml](https://noml.app) suite's icon set: 417 geometric monoline glyphs drawn to pair with the Noml Sans typeface. Superellipse "squircle" rounds (exponent 2.55), flat butt terminals, beveled apexes. Every icon is a tree-shakeable React component on a 24-unit grid at stroke 2, inheriting `currentColor`.
+**Noml Icons** is the [Noml](https://noml.app) suite's icon set: 1750 geometric monoline glyphs drawn to pair with the Noml Sans typeface. Superellipse "squircle" rounds (exponent 2.55), flat butt terminals, beveled apexes. Every icon is a tree-shakeable React component on a 24-unit grid at stroke 2, inheriting `currentColor`.
 
 ---
 

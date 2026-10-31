@@ -17,6 +17,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as Icons from "../src/index";
 import { squircle } from "../src/index";
+import { label } from "./label";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -27,14 +28,6 @@ type IconComponent = (props: { className?: string }) => unknown;
 const entries = Object.entries(Icons)
   .filter(([name, value]) => typeof value === "function" && name !== "squircle")
   .sort(([a], [b]) => a.localeCompare(b));
-
-/** "ArrowDownToLineIcon" -> "arrow-down-to-line"; "SuiteIcon" -> "suite". */
-function label(exportName: string): string {
-  return exportName
-    .replace(/Icon$/, "")
-    .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
-    .toLowerCase();
-}
 
 // Staggered reveal: 3ms per card, capped so the tail of the grid does not
 // lag the fold. prefers-reduced-motion disables the whole animation in CSS.
@@ -410,7 +403,6 @@ ${cards}
 
 <div class="toast" id="toast"></div>
 <script>
-  const total = ${entries.length};
   const q = document.getElementById("q");
   const cards = [...document.querySelectorAll(".card")];
   const empty = document.getElementById("empty");
@@ -424,7 +416,7 @@ ${cards}
       if (hit) shown++;
     }
     empty.style.display = shown === 0 ? "block" : "none";
-    count.textContent = shown + "/" + total;
+    count.textContent = shown + "/" + cards.length;
   });
   addEventListener("keydown", (e) => {
     if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); }
