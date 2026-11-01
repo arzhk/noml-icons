@@ -7,9 +7,9 @@
  *
  *  The page wears the Noml public brand ("classic" ink-on-paper, same as
  *  noml-web): pure black canvas, white ink, no hue, hard corners, print
- *  style inverted selection/hover, Noml Sans Rounded type. Fonts, the
- *  sticker cursors and the dino favicons live in docs/ (copied from the
- *  suite's brand assets; the fonts are OFL, see docs/fonts/LICENSE-OFL.txt). */
+ *  style inverted selection/hover, Noml Sans Rounded type. Fonts + the
+ *  sticker cursors live in docs/ (copied from the suite's brand assets;
+ *  the fonts are OFL, see docs/fonts/LICENSE-OFL.txt). */
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -52,6 +52,11 @@ const dinoMark = readFileSync(join(root, "docs", "noml-logo.svg"), "utf8")
   .replace(/<!DOCTYPE[\s\S]*?>\s*/, "")
   .replace("<svg ", `<svg class="dino" role="img" aria-label="Noml logo" `);
 
+// Favicon: the suite's dino tab icon (.github/assets/favicon.png, copied
+// from noml-web), inlined as a data URI so it adds no file to docs/. No
+// apple-touch-icon: the page is only opened locally, never bookmarked.
+const favicon = readFileSync(join(root, ".github", "assets", "favicon.png")).toString("base64");
+
 const html = `<!doctype html>
 <html lang="en">
 <head>
@@ -61,10 +66,7 @@ const html = `<!doctype html>
 <meta name="description" content="Noml Icons: ${entries.length} geometric monoline glyphs with superellipse squircle rounds, flat butt terminals and beveled apexes. React components, MIT licensed." />
 <meta property="og:title" content="Noml Icons" />
 <meta property="og:description" content="${entries.length} geometric monoline glyphs drawn to pair with Noml Sans. React components, MIT licensed." />
-<link rel="icon" type="image/x-icon" href="./favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="data:image/png;base64,${favicon}" />
 <style>
   /* Noml Sans Rounded - the suite typeface's friendly cut (Inter fork, OFL:
    * fonts/LICENSE-OFL.txt). Brand alternates are baked into the font, so no
