@@ -7,16 +7,15 @@
  *
  *  The page wears the Noml public brand ("classic" ink-on-paper, same as
  *  noml-web): pure black canvas, white ink, no hue, hard corners, print
- *  style inverted selection/hover, Noml Sans Rounded type. Fonts + the
- *  sticker cursors live in docs/ (copied from the suite's brand assets;
- *  the fonts are OFL, see docs/fonts/LICENSE-OFL.txt). */
+ *  style inverted selection/hover, Noml Sans Rounded type. Fonts, the
+ *  sticker cursors and the dino favicons live in docs/ (copied from the
+ *  suite's brand assets; the fonts are OFL, see docs/fonts/LICENSE-OFL.txt). */
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as Icons from "../src/index";
-import { squircle } from "../src/index";
 import { label } from "./label";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -40,18 +39,6 @@ const cards = entries
   })
   .join("\n");
 
-// Favicon: the suite mark (2x2 squircle tiles), white ink on black, as an
-// inline data URI so docs/ stays a single self-contained page + assets.
-const suiteTiles = [
-  squircle(6.5, 6.5, 3.5),
-  squircle(17.5, 6.5, 3.5),
-  squircle(6.5, 17.5, 3.5),
-  squircle(17.5, 17.5, 3.5),
-].join("");
-const favicon = encodeURIComponent(
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" fill="black"/><path d="${suiteTiles}" fill="none" stroke="white" stroke-width="2"/></svg>`,
-);
-
 const suiteMark = renderToStaticMarkup(
   createElement(Icons.SuiteIcon as IconComponent as never, { className: "mark" }),
 );
@@ -74,7 +61,10 @@ const html = `<!doctype html>
 <meta name="description" content="Noml Icons: ${entries.length} geometric monoline glyphs with superellipse squircle rounds, flat butt terminals and beveled apexes. React components, MIT licensed." />
 <meta property="og:title" content="Noml Icons" />
 <meta property="og:description" content="${entries.length} geometric monoline glyphs drawn to pair with Noml Sans. React components, MIT licensed." />
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,${favicon}" />
+<link rel="icon" type="image/x-icon" href="./favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
 <style>
   /* Noml Sans Rounded - the suite typeface's friendly cut (Inter fork, OFL:
    * fonts/LICENSE-OFL.txt). Brand alternates are baked into the font, so no
